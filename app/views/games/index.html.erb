@@ -1,0 +1,21 @@
+<h1>Games</h1>
+<div class="row">
+  <% @games.each do |game| %>
+    <div class="col-sm-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= game.title %></h5>
+          <p class="card-text">
+            Release Date: <%= game.release_date %><br>
+            System: <%= game.system.name %><br>
+            Genre: <%= game.genre %><br>
+            Cost: <%= number_to_currency(game.cost) %><br>
+            Manufacturer: <%= game.manufacturer %><br>
+            Condition: <%= game.condition %>
+          </p>
+          <%= link_to 'View Game', game, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

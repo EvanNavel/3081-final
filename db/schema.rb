@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_28_021249) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_28_031502) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_28_021249) do
     t.string "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "manufacturer"
     t.index ["system_id"], name: "index_games_on_system_id"
   end
 
@@ -33,6 +34,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_28_021249) do
     t.string "manufacturer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "cost"
+    t.string "condition"
   end
 
   add_foreign_key "games", "systems"

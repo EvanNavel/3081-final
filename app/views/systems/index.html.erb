@@ -1,0 +1,18 @@
+<h1>Systems</h1>
+<div class="row">
+  <% @systems.each do |system| %>
+    <div class="col-sm-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= system.name %></h5>
+          <p class="card-text">
+            Release Date: <%= system.release_date %><br>
+            Cost: <%= number_to_currency(system.cost) %><br>
+            Condition: <%= system.condition %>
+          </p>
+          <%= link_to 'View System', system, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
