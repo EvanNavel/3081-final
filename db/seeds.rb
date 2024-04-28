@@ -49,7 +49,21 @@ games_data = [
   { title: "Super Smash Bros. Brawl", release_date: Date.new(2008, 3, 9), system: nintendo_wii, genre: "Fighting", cost: 59.99, manufacturer: "Nintendo" },
   { title: "Paper Mario: The Thousand-Year Door", release_date: Date.new(2004, 7, 22), system: nintendo_gamecube, genre: "RPG", cost: 65.99, manufacturer: "Nintendo" },
   { title: "Gran Turismo 4", release_date: Date.new(2004, 12, 28), system: playstation_2, genre: "Racing", cost: 55.99, manufacturer: "Sony" },
-  { title: "Banjo-Kazooie", release_date: Date.new(1998, 6, 29), system: nintendo_64, genre: "Platform", cost: 49.99, manufacturer: "Rare" }
+  { title: "Banjo-Kazooie", release_date: Date.new(1998, 6, 29), system: nintendo_64, genre: "Platform", cost: 49.99, manufacturer: "Rare" },
+  { title: "Super Mario Sunshine", release_date: Date.new(2002, 8, 26), system: nintendo_gamecube, genre: "Platform", cost: 49.99, manufacturer: "Nintendo" },
+  { title: "Kingdom Hearts", release_date: Date.new(2002, 3, 28), system: playstation_2, genre: "Action RPG", cost: 49.99, manufacturer: "Square Enix" },
+  { title: "Animal Crossing: Wild World", release_date: Date.new(2005, 11, 23), system: nintendo_ds, genre: "Simulation", cost: 39.99, manufacturer: "Nintendo" },
+  { title: "The Legend of Zelda: The Wind Waker", release_date: Date.new(2002, 12, 13), system: nintendo_gamecube, genre: "Adventure", cost: 59.99, manufacturer: "Nintendo" },
+  { title: "Grand Theft Auto: San Andreas", release_date: Date.new(2004, 10, 26), system: playstation_2, genre: "Action-Adventure", cost: 49.99, manufacturer: "Rockstar Games" },
+  { title: "New Super Mario Bros.", release_date: Date.new(2006, 5, 15), system: nintendo_ds, genre: "Platform", cost: 34.99, manufacturer: "Nintendo" },
+  { title: "Super Mario 64", release_date: Date.new(1996, 6, 23), system: nintendo_64, genre: "Platform", cost: 59.99, manufacturer: "Nintendo" },
+  { title: "Metal Gear Solid 2: Sons of Liberty", release_date: Date.new(2001, 11, 12), system: playstation_2, genre: "Action-Adventure", cost: 49.99, manufacturer: "Konami" },
+  { title: "The Legend of Zelda: Majora's Mask", release_date: Date.new(2000, 4, 27), system: nintendo_64, genre: "Adventure", cost: 59.99, manufacturer: "Nintendo" },
+  { title: "Kingdom Hearts II", release_date: Date.new(2005, 12, 22), system: playstation_2, genre: "Action RPG", cost: 49.99, manufacturer: "Square Enix" },
+  { title: "Animal Crossing", release_date: Date.new(2001, 4, 14), system: nintendo_gamecube, genre: "Simulation", cost: 49.99, manufacturer: "Nintendo" },
+  { title: "Mario Kart: Double Dash!!", release_date: Date.new(2003, 11, 7), system: nintendo_gamecube, genre: "Racing", cost: 49.99, manufacturer: "Nintendo" },
+  { title: "Final Fantasy XII", release_date: Date.new(2006, 3, 16), system: playstation_2, genre: "RPG", cost: 49.99, manufacturer: "Square Enix" },
+  { title: "Mario Party 8", release_date: Date.new(2007, 5, 29), system: nintendo_wii, genre: "Party", cost: 49.99, manufacturer: "Nintendo" },
 ]
 
 games_data.each do |game|
