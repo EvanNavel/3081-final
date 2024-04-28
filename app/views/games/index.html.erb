@@ -1,21 +1,36 @@
 <h1>Games</h1>
-<div class="row">
-  <% @games.each do |game| %>
-    <div class="col-sm-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title"><%= game.title %></h5>
-          <p class="card-text">
-            Release Date: <%= game.release_date %><br>
-            System: <%= game.system.name %><br>
-            Genre: <%= game.genre %><br>
-            Cost: <%= number_to_currency(game.cost) %><br>
-            Manufacturer: <%= game.manufacturer %><br>
-            Condition: <%= game.condition %>
-          </p>
-          <%= link_to 'View Game', game, class: 'btn btn-primary' %>
-        </div>
-      </div>
+<div>
+  <%= form_tag games_path, method: :get, class: "form-inline mb-3" do %>
+    <div class="form-group">
+      <%= label_tag :search, "Search for a game by title:", class: "mr-2" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Enter game title", class: "form-control mr-2" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>System</th>
+      <th>Genre</th>
+      <th>Cost</th>
+      <th>Manufacturer</th>
+      <th>Condition</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.system.name %></td>
+        <td><%= game.genre %></td>
+        <td><%= number_to_currency(game.cost) %></td>
+        <td><%= game.manufacturer %></td>
+        <td><%= game.condition %></td>
+        <td><%= link_to 'View', game_path(game), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -3,7 +3,11 @@ class GamesController < ApplicationController
   before_action :set_systems, only: [:new, :edit]
 
   def index
-    @games = Game.includes(:system).all
+    if params[:search]
+      @games = Game.includes(:system).where('title ILIKE ?', "%#{params[:search]}%")
+    else
+      @games = Game.includes(:system).all
+    end
   end
 
   def show

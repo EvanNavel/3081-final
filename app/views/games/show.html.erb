@@ -1,0 +1,8 @@
+<!-- app/views/games/show.html.erb -->
+<h1><%= @game.title %></h1>
+<p><strong>System:</strong> <%= @game.system.name %></p>
+<p><strong>Release Date:</strong> <%= @game.release_date %></p>
+<p><strong>Genre:</strong> <%= @game.genre %></p>
+<p><strong>Cost:</strong> <%= number_to_currency(@game.cost) %></p>
+<p><strong>Manufacturer:</strong> <%= @game.manufacturer %></p>
+<p><strong>Condition:</strong> <%= @game.condition %></p>

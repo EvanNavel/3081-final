@@ -1,0 +1,31 @@
+<!-- app/views/systems/show.html.erb -->
+<h1><%= @system.name %></h1>
+<p><strong>Release Date:</strong> <%= @system.release_date %></p>
+<p><strong>Cost:</strong> <%= number_to_currency(@system.cost) %></p>
+<p><strong>Condition:</strong> <%= @system.condition %></p>
+
+<h2>Games for this System</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Cost</th>
+      <th>Manufacturer</th>
+      <th>Condition</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @system.games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.genre %></td>
+        <td><%= number_to_currency(game.cost) %></td>
+        <td><%= game.manufacturer %></td>
+        <td><%= game.condition %></td>
+        <td><%= link_to 'View Game', game_path(game) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
