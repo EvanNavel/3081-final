@@ -8,26 +8,14 @@ Models
 The application consists of two main model classes:
 
 System
-Attributes:
-
-Name: The name of the video game system.
-Release Date: The release date of the video game system.
-Manufacturer: The manufacturer of the video game system.
+Attributes: Name, Release Date, Manufacturer
 
 Validations:
 Presence and uniqueness validation for the name attribute.
 Validation to ensure the release date is valid.
 
 Game
-Attributes:
-
-Title: The title of the video game.
-Release Date: The release date of the video game.
-System: The video game system the game belongs to.
-Genre: The genre of the video game.
-Cost: The purchase cost of the video game.
-Manufacturer: The manufacturer of the video game.
-Condition: The condition of the video game.
+Attributes: Title, Release Date, System, Genre, Cost, Manufacturer, Condition
 
 Validations:
 Presence validation for essential attributes like title and system.
