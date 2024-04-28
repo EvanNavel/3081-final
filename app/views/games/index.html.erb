@@ -8,15 +8,15 @@
     </div>
   <% end %>
 </div>
-<table class="table">
+<table class="table" id="gamesTable">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>System</th>
-      <th>Genre</th>
-      <th>Cost</th>
-      <th>Manufacturer</th>
-      <th>Condition</th>
+    <th onclick="sortTable(0)" style="cursor: pointer; text-decoration: underline; color: blue;">Title</th>
+    <th onclick="sortTable(1)" style="cursor: pointer; text-decoration: underline; color: blue;">System</th>
+    <th onclick="sortTable(2)" style="cursor: pointer; text-decoration: underline; color: blue;">Genre</th>
+    <th onclick="sortTable(3)" style="cursor: pointer; text-decoration: underline; color: blue;">Cost</th>
+    <th onclick="sortTable(4)" style="cursor: pointer; text-decoration: underline; color: blue;">Manufacturer</th>
+    <th onclick="sortTable(5)" style="cursor: pointer; text-decoration: underline; color: blue;">Condition</th>
       <th>Details</th>
     </tr>
   </thead>
@@ -34,3 +34,28 @@
     <% end %>
   </tbody>
 </table>
+
+<script>
+function sortTable(columnIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("gamesTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[columnIndex];
+      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch= true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
